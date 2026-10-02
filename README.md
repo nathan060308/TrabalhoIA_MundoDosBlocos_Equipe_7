@@ -22,8 +22,8 @@ A abordagem converte uma especificação em Lógica de Primeira Ordem (LPO) para
 ## Arquitetura e Ficheiros do Repositório
 
 * **`bw2cnf_var.py`**: Gerador em Python que converte as regras formais, estado inicial e meta para cláusulas CNF no formato DIMACS, gerando também o mapa de variáveis.
-* **`rodar_sat.py`**: Script responsável por invocar o SAT Solver (`python-sat` / `miniSAT`) e registrar a valoração dos literais lógicos.
-* **`interpretar.py`**: Interpretador que mapeia os identificadores booleanos de volta para ações em linguagem natural e estado temporal do sistema.
+* **`rodar_sat.py`**: Script responsável por invocar o SAT Solver (`python-sat` / `miniSAT`) e registrar a valoração dos literais lógicos no arquivo de saída informado.
+* **`interpretar.py`**: Interpretador que mapeia os identificadores booleanos do arquivo de resultado de volta para ações em linguagem natural e estado temporal do sistema.
 * **`trab01_blocos2SAT.cnf`**: Arquivo gerado em formato DIMACS CNF contendo as cláusulas proposicionais.
 * **`trab01_blocos2SAT.map`**: Mapeamento numérico de variáveis booleanas para predicados e instantes temporais.
 * **`resultado1.txt`**: Saída do Solver para o Cenário 1 (SAT com $T=4$).
@@ -34,7 +34,7 @@ A abordagem converte uma especificação em Lógica de Primeira Ordem (LPO) para
 
 ## Requisitos de Instalação
 
-* **Python 3.8+**
-* Biblioteca `python-sat`:
-  ```bash
-  pip install python-sat
+Para executar o projeto, é necessário ter o **Python 3.8+** instalado e a biblioteca `python-sat`:
+
+```bash
+pip install python-sat
